@@ -1,0 +1,68 @@
+@import "color";
+
+a {
+  all: unset;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: $secundary;
+  color: white;
+  font-weight: 900;
+  height: 50px;
+  font-size: 14px;  box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
+  -webkit-box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
+  -moz-box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
+}
+
+.icons{
+    margin-right: 100px;
+}
+.logo {
+    margin-left: 100px;
+}
+
+.git-ico{
+    margin: auto;
+    font-size: 20px;
+}
+
+.in-ico{
+    margin: auto;
+    font-size: 20px;
+}
+
+nav div {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+.text-nav {
+  color: white;
+  cursor: pointer;
+}
+
+.text-nav-home:hover,
+.text-nav-post:hover,
+.text-nav-posts:hover {
+  color: $fonts;
+  cursor: pointer;
+}
+
+.git-ico:hover {
+  cursor: pointer;
+  color: $fonts;
+}
+
+.in-ico:hover {
+  cursor: pointer;
+  color: $fonts;
+}
+
+.logo{
+    cursor: pointer;
+}
