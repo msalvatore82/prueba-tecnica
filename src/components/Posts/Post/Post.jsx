@@ -6,8 +6,6 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { destroyPostById } from "../../../features/posts/postsSlice";
 
 
-
-
 const Post = () => {
   const { posts, isLoading,  } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
@@ -25,7 +23,8 @@ const Post = () => {
         <div className="card-container">
         <div className="card-post" key={post.id}>
           <Link to={"/post/" + post.id}>
-            <p className="text-user" >UserId: {post.userId}</p>
+          
+            <p className="text-user" >UserId: {post.userId}</p> 
             {/* <p>Id: {post.Id}</p> */}
             <p className="text-title" >Title: {post.title}</p>
             <p className="text-body">Body: {post.body}</p>

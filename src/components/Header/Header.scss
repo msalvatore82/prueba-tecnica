@@ -48,17 +48,25 @@ nav div {
 
 .text-nav-home:hover,
 .text-nav-post:hover,
-.text-nav-posts:hover {
+.text-nav-posts:hover,
+.text-nav-login:hover {
   color: $fonts;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   
  
 }
 
 .text-nav-home:hover,
 .text-nav-post:hover,
-.text-nav-posts:hover {
+.text-nav-posts:hover,
+.text-nav-login:hover {
     text-decoration-line: overline; 
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 
 }
 
@@ -68,11 +76,17 @@ nav div {
 .git-ico:hover {
   cursor: pointer;
   color: $fonts;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .in-ico:hover {
   cursor: pointer;
   color: $fonts;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .logo{

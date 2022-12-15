@@ -6,6 +6,7 @@ import Posts from "./components/Posts/Posts";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import { FaWhatsapp } from "react-icons/fa";
+import Login from "./components/Login/Login";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/post" element={<Post />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
       <a href="https://acortar.link/P0x3vE" className="btn-flotante" target="_blank" rel="noopener noreferrer"> <FaWhatsapp /> </a>
