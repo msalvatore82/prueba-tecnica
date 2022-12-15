@@ -1,9 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Post from "./components/Posts/Post/Post";
 import Posts from "./components/Posts/Posts";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
           <Route path="/posts" element={<Posts />} />
         </Routes>
       </BrowserRouter>
+      <a href="https://acortar.link/P0x3vE" className="btn-flotante" target="_blank" rel="noopener noreferrer"> <FaWhatsapp /> </a>
+
     </div>
   );
 }

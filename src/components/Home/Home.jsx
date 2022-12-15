@@ -16,7 +16,7 @@ function Home() {
       <p className='pretitle'>PRUEBA TECNICA</p>
       <span className='title'>Matias Salvatore desarrollador Front End</span>
       <p className='text-home'>Me gusta los retos y me enfoco en brindar lo mejor para que el equipo de trabajo pueda cumplir con los Objetivos</p>
-      <button className='button-accept'>Aprobar <FaRegThumbsUp style={{ marginLeft: 5, fontSize: 18 }} />  </button>
+      <a href="mailto:salvatoretadey.matias@gmail.com"> <button className='button-accept'>Aprobar <FaRegThumbsUp style={{ marginLeft: 5, fontSize: 18 }} />  </button> </a>
       <button className='button-discard'>Rechazar <FaRegThumbsDown style={{ marginLeft: 5, fontSize: 18 }} /> </button>
     </div>
 

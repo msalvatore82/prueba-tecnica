@@ -51,7 +51,19 @@ nav div {
 .text-nav-posts:hover {
   color: $fonts;
   cursor: pointer;
+  
+ 
 }
+
+.text-nav-home:hover,
+.text-nav-post:hover,
+.text-nav-posts:hover {
+    text-decoration-line: overline; 
+
+}
+
+
+
 
 .git-ico:hover {
   cursor: pointer;
