@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Home.scss"
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 
@@ -14,8 +13,8 @@ function Home() {
   return (
     <div className='home'>
       <p className='pretitle'>PRUEBA TECNICA</p>
-      <span className='title'>Matias Salvatore desarrollador Front End</span>
-      <p className='text-home'>Me gusta los retos y me enfoco en brindar lo mejor para que el equipo de trabajo pueda cumplir con los Objetivos</p>
+      <span className='title'>Matias Salvatore Tadey Desarrollador Front End</span>
+      <p className='text-home'>Me gustan los retos, el buen gusto, estoy atento a los detalles y me enfoco en brindar lo mejor para que los equipos de trabajo que integro puedan cumplir con los  OBJETIVOS </p>
       <a href="mailto:salvatoretadey.matias@gmail.com"> <button className='button-accept'>Aprobar <FaRegThumbsUp style={{ marginLeft: 5, fontSize: 18 }} />  </button> </a>
       <button className='button-discard'>Rechazar <FaRegThumbsDown style={{ marginLeft: 5, fontSize: 18 }} /> </button>
     </div>
