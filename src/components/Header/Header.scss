@@ -11,26 +11,27 @@ nav {
   color: white;
   font-weight: 900;
   height: 50px;
-  font-size: 14px;  box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
+  font-size: 14px;
+  box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
   -webkit-box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
   -moz-box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
 }
 
-.icons{
-    margin-right: 100px;
+.icons {
+  margin-right: 100px;
 }
 .logo {
-    margin-left: 100px;
+  margin-left: 100px;
 }
 
-.git-ico{
-    margin: auto;
-    font-size: 20px;
+.git-ico {
+  margin: auto;
+  font-size: 20px;
 }
 
-.in-ico{
-    margin: auto;
-    font-size: 20px;
+.in-ico {
+  margin: auto;
+  font-size: 20px;
 }
 
 nav div {
@@ -38,40 +39,50 @@ nav div {
   justify-content: space-around;
   gap: 15px;
   align-items: center;
-  
 }
 
 .text-nav {
   color: white;
   cursor: pointer;
 }
+.ico-nav-logout {
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text-nav-login {
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .text-nav-home:hover,
 .text-nav-post:hover,
 .text-nav-posts:hover,
-.text-nav-login:hover {
+.text-nav-login:hover,
+.ico-nav-logout:hover,
+.text-nav-friend:hover {
   color: $fonts;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  
- 
 }
 
 .text-nav-home:hover,
 .text-nav-post:hover,
 .text-nav-posts:hover,
-.text-nav-login:hover {
-    text-decoration-line: overline; 
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-
+.text-nav-login:hover,
+.ico-nav-logout:hover,
+.text-nav-friend:hover {
+  text-decoration-line: overline;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
-
-
 
 .git-ico:hover {
   cursor: pointer;
@@ -89,6 +100,6 @@ nav div {
   transition: all 0.3s;
 }
 
-.logo{
-    cursor: pointer;
+.logo {
+  cursor: pointer;
 }

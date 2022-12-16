@@ -1,9 +1,9 @@
 @import "color.scss";
 
 .card-post {
-  margin: 10px;
   display: flex;
   flex-wrap:  wrap;
+  justify-content: center;
 
   .card-container{
     width: 28%;
@@ -23,6 +23,7 @@
 
   .button-delete {
     background: $buttons;
+    margin-left: auto;
     color: white;
     font-weight: 500;
     font-family: "Work Sans", Sans-serif;

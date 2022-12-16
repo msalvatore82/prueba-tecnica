@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { useDispatch } from "react-redux";
-// import { login } from "../../features/auth/authSlice";
+import { Navigate } from "react-router-dom";
 import avatar from "../../Assets/avatar.png";
 import { login } from "../../features/auth/authSlice";
 import "./login.scss";
@@ -33,8 +32,11 @@ const Login = () => {
     const onSubmit = (e) => {
       e.preventDefault();
       dispatch(login(formData));
+      Navigate("/");
       clearState();
     };
+
+
 
   return (
     <div className="login-container">
@@ -57,7 +59,7 @@ const Login = () => {
           onChange={onChange}
         />
         <button type="submit" className="button-login">
-          Login
+          iNICIAR SESION
         </button>
       </form>
     </div>

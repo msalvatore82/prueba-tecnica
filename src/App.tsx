@@ -8,7 +8,7 @@ import Home from "./components/Home/Home";
 import { FaWhatsapp } from "react-icons/fa";
 import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Friends from "./components/Friends/Friends";
 
 
 function App() {
@@ -16,13 +16,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Header />
-      <Sidebar /> 
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post" element={<Post />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/friends" element={<Friends />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
