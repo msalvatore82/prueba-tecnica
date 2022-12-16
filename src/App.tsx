@@ -8,6 +8,7 @@ import Home from "./components/Home/Home";
 import { FaWhatsapp } from "react-icons/fa";
 import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Header />
+      <Sidebar /> 
 
         <Routes>
           <Route path="/" element={<Home />} />

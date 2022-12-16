@@ -3,10 +3,9 @@
 .card-post {
   margin: 10px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:  wrap;
 
-  .card-post {
-    float: left;
+  .card-container{
     width: 28%;
     max-height: max-content;
     background: $secundary;

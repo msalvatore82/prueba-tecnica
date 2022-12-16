@@ -1,10 +1,27 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import postsService from "./postsService";
 
-const initialState = {
+interface Post {
+  id: number;
+  userId: number;
+  title: string;
+  body: string;
+}
+
+interface InitialState {
+  posts: Post[];
+  isLoading: boolean;
+  post: Post;
+}
+const initialState: InitialState = {
   posts: [],
   isLoading: false,
-  post:{}
+  post: {
+    id: 0,
+    userId: 0,
+    title: "",
+    body: "",
+  },
 };
 
 export const getAllPosts = createAsyncThunk("posts/getAllPosts", async () => {
@@ -31,39 +48,44 @@ export const getAllPosts = createAsyncThunk("posts/getAllPosts", async () => {
 //   }
 // })
 
-export const destroyPostById = createAsyncThunk("posts/destroyPostById",async(id: number)=>{
-  try {
-    return await postsService.destroyPostById(id)
-  } catch (error) {
-    console.error(error)
+export const destroyPostById = createAsyncThunk(
+  "posts/destroyPostById",
+  async (id: number) => {
+    try {
+      return id;
+    } catch (error) {
+      console.error(error);
+    }
   }
-})
+);
 
 export const postsSlice = createSlice({
   name: "posts",
   initialState,
   reducers: {
     reset: (state) => {
-        state.isLoading = false;
-      },
+      state.isLoading = false;
+    },
   },
   extraReducers: (builder) => {
     builder
-    .addCase(getAllPosts.fulfilled, (state, action) => {
-      state.posts = action.payload;
-    })
-    // // .addCase(getAllPosts.pending, (state, action) => {
-    // //     state.isLoading = true;
-    // //   })
-//     .addCase(getPostById.fulfilled,(state,action)=>{
-//         state.post = action.payload
-//     })
-//     .addCase(getPostByName.fulfilled,(state,action)=>{
-//       state.posts = action.payload
-//     })
-    .addCase(destroyPostById.fulfilled,(state,action)=>{
-      state.posts = state.posts.filter(post => post !== +action.payload.id)
-    })
+      .addCase(getAllPosts.fulfilled, (state, action) => {
+        state.posts = action.payload;
+      })
+      // // .addCase(getAllPosts.pending, (state, action) => {
+      // //     state.isLoading = true;
+      // //   })
+      //     .addCase(getPostById.fulfilled,(state,action)=>{
+      //         state.post = action.payload
+      //     })
+      //     .addCase(getPostByName.fulfilled,(state,action)=>{
+      //       state.posts = action.payload
+      //     })
+      .addCase(destroyPostById.fulfilled, (state, action) => {
+        state.posts = state.posts.filter(
+          (post: Post) => post.id !== action.payload
+        );
+      });
   },
 });
 

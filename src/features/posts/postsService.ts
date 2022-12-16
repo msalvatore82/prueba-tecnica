@@ -17,16 +17,12 @@ const getAllPosts = async () => {
 //   return res.data
 // }
 
-const destroyPostById = async(id: number)=>{
-  const res = await axios.delete("/posts/destroyPostById/")
-  return res.data
-}
+
 
 const postsService = {
   getAllPosts,
 //   getPostById,
 //   getPostByName,
-  destroyPostById
 };
 
 export default postsService;

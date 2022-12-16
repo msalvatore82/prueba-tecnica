@@ -16,7 +16,7 @@ const Post = () => {
     return <h1>Cargando...</h1>;
   }
   return (
-    <div>
+    <>
       {posts.map((post) => (
         <div className="card-container">
           <div className="card-post" key={post.id}>
@@ -32,9 +32,9 @@ const Post = () => {
               </button>
             </Link>
           </div>
-        </div>
+         </div>
       ))}
-    </div>
+    </>
   );
 };
 
