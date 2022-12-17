@@ -13,7 +13,7 @@ const getAllPosts = async () => {
 // }
 
 // const getPostByName = async(title)=>{
-//   const res = await axios.get(API_URL + "/posts/getPostByName/" + title)
+//   const res = await axios.get(API_URL)
 //   return res.data
 // }
 
@@ -22,7 +22,7 @@ const getAllPosts = async () => {
 const postsService = {
   getAllPosts,
 //   getPostById,
-//   getPostByName,
+  // getPostByName,
 };
 
 export default postsService;

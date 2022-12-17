@@ -12,13 +12,9 @@ const Friends = () => {
     }, []);
     
     return (
-      <div className="friend-container">
-        
-        <div className="card-friend">
-
+      <div>
         <Friend />
         </div>
-      </div>
     );
   };
   

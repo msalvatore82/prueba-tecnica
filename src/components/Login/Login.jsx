@@ -1,42 +1,40 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
-import avatar from "../../Assets/avatar.png";
+import avatar from "../../Assets/super/avatar1.png";
 import { login } from "../../features/auth/authSlice";
 import "./login.scss";
 
 const Login = () => {
-    const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const { email, password } = formData;
+
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const dispatch = useDispatch();
+
+  const clearState = () => {
+    setFormData({
       email: "",
       password: "",
     });
-  
-    const { email, password } = formData;
-  
-    const onChange = (e) => {
-      setFormData((prevState) => ({
-        ...prevState,
-        [e.target.name]: e.target.value,
-      }));
-    };
-  
-    const dispatch = useDispatch();
-  
-    const clearState = () => {
-      setFormData({
-        email: "",
-        password: "",
-      });
-    };
-  
-    const onSubmit = (e) => {
-      e.preventDefault();
-      dispatch(login(formData));
-      Navigate("/");
-      clearState();
-    };
+  };
 
-
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch(login(formData));
+    clearState();
+    Navigate("/");
+  };
 
   return (
     <div className="login-container">

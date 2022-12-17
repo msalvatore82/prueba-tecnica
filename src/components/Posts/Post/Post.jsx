@@ -32,7 +32,7 @@ const Post = () => {
               </button>
             </Link>
           </div>
-         </div>
+        </div>
       ))}
     </>
   );
