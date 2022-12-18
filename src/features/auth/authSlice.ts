@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import authService from "./authService";
 
-// const user = JSON.parse(localStorage.getItem("user"));
 
 interface Friend {
   lat:string,
@@ -65,14 +64,6 @@ export const getAllFriends = createAsyncThunk(
   }
 );
 
-// export const register = createAsyncThunk("auth/register", async (user) => {
-//   try {
-//     return await authService.register(user);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
-
 export const login = createAsyncThunk("auth/login", async (user) => {
   try {
     return await authService.login(user);
@@ -96,7 +87,7 @@ export const authSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(login.fulfilled, (state, action) => {
-        state.user = action.payload;
+        state.user  = action.payload;
       })
       .addCase(getAllFriends.fulfilled, (state, action) => {
         state.friends = action.payload;

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Navigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import avatar from "../../Assets/super/avatar1.png";
 import { login } from "../../features/auth/authSlice";
 import "./login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -33,7 +35,7 @@ const Login = () => {
     e.preventDefault();
     dispatch(login(formData));
     clearState();
-    Navigate("/");
+    navigate("/");
   };
 
   return (

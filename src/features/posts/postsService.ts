@@ -7,22 +7,14 @@ const getAllPosts = async () => {
   return res.data;
 };
 
-// const getPostById = async (id)=>{
-//     const res = await axios.get(API_URL +"/posts/getPostById/" + id)
-//     return res.data
-// }
-
-// const getPostByName = async(title)=>{
-//   const res = await axios.get(API_URL)
-//   return res.data
-// }
-
-
+const updatePost = async (id: number) => {
+  const res = await axios.put(API_URL);
+  return res.data;
+};
 
 const postsService = {
   getAllPosts,
-//   getPostById,
-  // getPostByName,
+  updatePost,
 };
 
 export default postsService;

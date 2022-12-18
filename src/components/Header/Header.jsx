@@ -39,26 +39,30 @@ const Header = () => {
         </a>
       </div>
       <div>
+        <span className="text-nav-home" title="Home">
+          <Link to="/">HOME</Link>
+        </span>
         {user ? (
           <>
-            <span className="text-nav-home" title="Home">
-              <Link to="/">HOME</Link>
-            </span>
             <span className="text-nav-posts" title="Post">
               <Link to="/posts">POST</Link>
             </span>
             <span className="text-nav-friend" title="Amigos">
               <Link to="/friends">AMIGOS</Link>
             </span>
-            <span onClick={onLogout} className="ico-nav-logout" title="Cerra sesíon">
+            <span
+              onClick={onLogout}
+              className="ico-nav-logout"
+              title="Cerra sesíon"
+            >
               <AiOutlineLogout />
             </span>
-              <input
-          onKeyUp={handleChange}
-          placeholder="search post"
-          name="text"
-          className="serch-nav"
-        />
+            <input
+              onKeyUp={handleChange}
+              placeholder="search post"
+              name="text"
+              className="serch-nav"
+            />
             {/* <span>
               <Link to="/profile">{user.user.name}</Link>
             </span> */}
@@ -66,11 +70,14 @@ const Header = () => {
         ) : (
           <>
             <span className="text-nav-login" title="INICIAR SESION">
-              <Link to="/login"> <AiOutlineLogin   /> </Link>
+              <Link to="/login">
+                {" "}
+                <AiOutlineLogin />{" "}
+              </Link>
             </span>
           </>
         )}
-      
+
         <div className="icons" title="LinkedIn">
           <a
             href="https://www.linkedin.com/in/salvatorematias/"
