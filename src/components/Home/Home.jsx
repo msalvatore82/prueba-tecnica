@@ -1,7 +1,7 @@
 import "./Home.scss";
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 import cleverpyTeam from "../../Assets/super/Cleverpy-rotated-e1655822809236-973x1024.jpeg";
-import { AiOutlineGithub, AiTwotoneWarning } from "react-icons/ai";
+import { AiOutlineArrowRight, AiOutlineGithub, AiTwotoneWarning } from "react-icons/ai";
 
 //Descomentar y probar boton de rechazar
 // const boton_no = document.getElementsByClassName('button-discard')[0];
@@ -50,10 +50,10 @@ function Home() {
             con “cards” para la visualización de posts o comentarios realizados
             por un usuario
           </p>
-          <a href="mailto:salvatoretadey.matias@gmail.com">
+          <a href="https://drive.google.com/file/d/1RwR5TdMTnjyFssQUP1PmiFcaK_KEAR94/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <button className="button-test">
               Link archivo{" "}
-              <FaRegThumbsUp style={{ marginLeft: 5, fontSize: 18 }} />{" "}
+              <AiOutlineArrowRight style={{ marginLeft: 5, fontSize: 18 }} />{" "}
             </button>
           </a>
         </div>

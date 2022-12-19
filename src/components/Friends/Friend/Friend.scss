@@ -1,24 +1,23 @@
 @import "color.scss";
 
-.cards-friend-container {
+.card-container-friends {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
   align-items: flex-start;
   justify-content: center;
+  width: 98%;
+  margin: 15px;
 
-
-  .card-friend{
+  .card-friend {
     width: 15%;
-    max-height: max-content;
-    background: $secundary;
-    padding: 0.8%;
-    margin: 1.7%;
+    height: 170px;
+    margin: 15px;
     border-radius: 15%;
+    padding: 15px;
     color: white;
     -webkit-border-radius: 5px 5px 5px 40px;
     -moz-border-radius: 5px 5px 5px 40px;
-    border-radius: 5px;
+    border-radius: 5px 5px 5px 40px;
     box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.46);
     -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.46);
     -moz-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.46);
@@ -27,40 +26,46 @@
   .card-friend {
     margin-top: 3%;
   }
+
   .text-name-friend {
     flex-direction: column;
     text-align: left;
-    background-color: #ee7878;
+    width: 70%;
+    margin: 10px;
   }
   .text-surname-friend {
     flex-direction: column;
     text-align: left;
-    background-color: #5f1414;
   }
   .email {
     text-align: left;
-    background-color: #5ea561;
-  }
-  .avatar-friends {
-    border: 20px double #525252;
-    border-radius: 50%;
-    text-align: right;
   }
 
+.name-avatar{
+  display: flex;
+  flex-direction: row;
+}
+
+.email-surname{
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+}
   .avatar-friends {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+ 
   }
 
   .picture {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     padding: 10px;
     margin-bottom: 10px;
   }
 
   .text-surname-friend {
-    font-size: 10px;
+    font-size: 15px;
     color: $fontsecundary;
     color: #525252;
   }
@@ -93,4 +98,9 @@
       transition: all 0.3s;
     }
   }
+}
+.avatar-friends {
+  border: 10px double #525252;
+  border-radius: 50%;
+  
 }

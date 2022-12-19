@@ -9,24 +9,20 @@ const Friend = () => {
     return <h1>Cargando...</h1>;
   }
   return (
-    <>
+    <div className="card-container-friends">
       {friends.map((friend) => (
-        <div className="cards-friend-container">
-          <div className="card-friend" key={friend.id}>
-              <div className="name-surname">
-                <p className="text-name-friend">{friend.name}</p>
-                <p className="text-surname-friend">{friend.username}</p>
-              </div>
-              <div className="email">
-                <p className="text-email-friend">{friend.email}</p>
-              </div>
-              <div className="avatar-friends">
-                <img className="picture" src={avatar} alt="avatar" />
-              </div>
+        <div key={friend.id} className="card-friend">
+          <div className="name-avatar">
+            <p className="text-name-friend">{friend.name} </p>
+            <img className="picture avatar-friends" src={avatar} alt="avatar" />
+          </div>
+          <div className="email-surname">
+            <p className="text-surname-friend">{friend.username}</p>
+            <p className="text-email-friend">{friend.email}</p>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
