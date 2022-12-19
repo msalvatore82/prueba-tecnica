@@ -5,11 +5,14 @@ a {
 }
 nav {
   display: flex;
+  margin: 0;
+  width: 100%;
   justify-content: space-between;
   padding: 10px;
   background-color: $secundary;
   color: white;
   font-weight: 900;
+ 
   height: 50px;
   font-size: 14px;
   box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
@@ -37,13 +40,14 @@ nav {
 nav div {
   display: flex;
   justify-content: space-around;
-  gap: 15px;
+  margin-left: 15px;
   align-items: center;
 }
 
 .text-nav {
   color: white;
   cursor: pointer;
+ 
 }
 .ico-nav-logout {
   color: white;

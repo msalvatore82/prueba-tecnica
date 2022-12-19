@@ -23,10 +23,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <a href="https://acortar.link/P0x3vE"className="btn-flotante" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+
         <Footer />        
       </BrowserRouter>
       
-      <a href="https://acortar.link/P0x3vE"className="btn-flotante" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
     </div>
   );
 }

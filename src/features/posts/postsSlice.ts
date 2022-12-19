@@ -42,13 +42,6 @@ export const destroyPostById = createAsyncThunk(
     }
   }
 );
-export const updatePost = createAsyncThunk("posts/updatePost", async (id: number) => {
-  try {
-    return await postsService.updatePost(id);
-  } catch (error) {
-    console.error(error);
-  }
-});
 
 export const postsSlice = createSlice({
   name: "posts",
@@ -59,21 +52,18 @@ export const postsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder 
+    builder
       .addCase(getAllPosts.fulfilled, (state, action) => {
         state.posts = action.payload;
       })
+      
       .addCase(destroyPostById.fulfilled, (state, action) => {
         state.posts = state.posts.filter(
           (post: Post) => post.id !== action.payload
         );
-    })
-    
-    
+      });
   },
 });
 
 export const { reset } = postsSlice.actions;
 export default postsSlice.reducer;
-
-

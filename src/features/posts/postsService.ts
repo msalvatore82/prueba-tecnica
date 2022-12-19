@@ -7,14 +7,8 @@ const getAllPosts = async () => {
   return res.data;
 };
 
-const updatePost = async (id: number) => {
-  const res = await axios.put(API_URL);
-  return res.data;
-};
-
 const postsService = {
   getAllPosts,
-  updatePost,
 };
 
 export default postsService;

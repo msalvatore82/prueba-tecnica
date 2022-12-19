@@ -39,6 +39,7 @@ const Login = () => {
   };
 
   return (
+  <div className="login-box"> 
     <div className="login-container">
       <img src={avatar} alt="" srcset="" className="avatar" />
       <form onSubmit={onSubmit} className="form">
@@ -63,6 +64,7 @@ const Login = () => {
         </button>
       </form>
     </div>
+  </div>
   );
 };
 export default Login;

@@ -19,13 +19,6 @@ const Header = () => {
     dispatch(logout());
     navigate("/login");
   };
-  const [text, setText] = useState("");
-  const handleChange = (e) => {
-    setText(e.target.value);
-    if (e.key === "Enter") {
-      navigate("/search/" + text);
-    }
-  };
 
   return (
     <nav>
@@ -57,22 +50,12 @@ const Header = () => {
             >
               <AiOutlineLogout />
             </span>
-            <input
-              onKeyUp={handleChange}
-              placeholder="search post"
-              name="text"
-              className="serch-nav"
-            />
-            {/* <span>
-              <Link to="/profile">{user.user.name}</Link>
-            </span> */}
           </>
         ) : (
           <>
             <span className="text-nav-login" title="INICIAR SESION">
               <Link to="/login">
-                {" "}
-                <AiOutlineLogin />{" "}
+                <AiOutlineLogin />
               </Link>
             </span>
           </>
@@ -94,9 +77,6 @@ const Header = () => {
             <FaGithubSquare className="git-ico" title="Repo Github" />
           </a>
         </div>
-        {/* {user?.user?.role === "admin" ?  <span>
-          <Link to="/admin">Admin</Link>
-        </span>: ""}  */}
       </div>
     </nav>
   );
