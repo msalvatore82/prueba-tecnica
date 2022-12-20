@@ -73,7 +73,7 @@ function Home() {
               <AiOutlineGithub style={{ marginLeft: 5, fontSize: 18 }} />
             </button>
           </a>
-          <a href="mailto:salvatoretadey.matias@gmail.com">
+          <a href="https://main.d3bowlpwv2y67a.amplifyapp.com/">
             <button className="button-pre-footer">
               Despliegue AWS 
               <FaAws style={{ marginLeft: 5, fontSize: 18 }} />
