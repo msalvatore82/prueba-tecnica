@@ -1,9 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import { Link, useNavigate } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
-// import { logout } from "../../features/auth/authSlice";
 import "./Header.scss";
-import { useState } from "react";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { AiOutlineLogout, AiOutlineLogin } from "react-icons/ai";
 import logo from "../../Assets/Cleverpy.jpg";

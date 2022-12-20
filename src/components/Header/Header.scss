@@ -12,7 +12,6 @@ nav {
   background-color: $secundary;
   color: white;
   font-weight: 900;
- 
   height: 50px;
   font-size: 14px;
   box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
@@ -30,6 +29,7 @@ nav {
 .git-ico {
   margin: auto;
   font-size: 20px;
+  margin: 15px;
 }
 
 .in-ico {
@@ -42,12 +42,17 @@ nav div {
   justify-content: space-around;
   margin-left: 15px;
   align-items: center;
+  
 }
 
 .text-nav {
   color: white;
   cursor: pointer;
- 
+  gap: 5px; 
+}
+
+span{
+  margin: 15px;
 }
 .ico-nav-logout {
   color: white;
@@ -107,3 +112,5 @@ nav div {
 .logo {
   cursor: pointer;
 }
+
+

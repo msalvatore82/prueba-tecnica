@@ -16,28 +16,25 @@ function Home() {
     <>
       <div className="home">
         <p className="pretitle">PRUEBA TECNICA</p>
-        <span className="title">
-          Matias Salvatore Tadey Desarrollador Front End
-        </span>
+        <p className="title">Matias Salvatore Tadey Desarrollador Front End
+        </p>
         <p className="text-home">
           Me gustan los retos, el buen gusto, estoy atento a los detalles y me
           enfoco en brindar lo mejor para que los equipos de trabajo que integro
-          puedan cumplir con los OBJETIVOS{" "}
+          puedan cumplir con los OBJETIVOS
         </p>
-        <a href="mailto:salvatoretadey.matias@gmail.com">
-          {" "}
+        <a href="mailto:salvatoretadey.matias@gmail.com">          
           <button className="button-accept">
-            Aprobar <FaRegThumbsUp style={{ marginLeft: 5, fontSize: 18 }} />{" "}
-          </button>{" "}
+            Aprobar <FaRegThumbsUp style={{ marginLeft: 5, fontSize: 18 }} />
+          </button>
         </a>
         <a
           href="https://media.tenor.com/aJS-RwwJUxUAAAAC/puss-in-boots-please.gif"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {" "}
           <button className="button-discard">
-            Rechazar <FaRegThumbsDown style={{ marginLeft: 5, fontSize: 18 }} />{" "}
+            Rechazar <FaRegThumbsDown style={{ marginLeft: 5, fontSize: 18 }} />
           </button>
         </a>
       </div>
@@ -52,8 +49,8 @@ function Home() {
           </p>
           <a href="https://drive.google.com/file/d/1RwR5TdMTnjyFssQUP1PmiFcaK_KEAR94/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <button className="button-test">
-              Link archivo{" "}
-              <AiOutlineArrowRight style={{ marginLeft: 5, fontSize: 18 }} />{" "}
+              Link archivo
+              <AiOutlineArrowRight style={{ marginLeft: 5, fontSize: 18 }} />
             </button>
           </a>
         </div>
@@ -72,14 +69,14 @@ function Home() {
         <div className="pre-footer-button">
           <a href="https://github.com/msalvatore82/prueba-tecnica.git" target="_blank" rel="noopener noreferrer">
             <button className="button-pre-footer">
-              Repo de la prueba{" "}
-              <AiOutlineGithub style={{ marginLeft: 5, fontSize: 18 }} />{" "}
+              Repo de la prueba
+              <AiOutlineGithub style={{ marginLeft: 5, fontSize: 18 }} />
             </button>
           </a>
           <a href="mailto:salvatoretadey.matias@gmail.com">
             <button className="button-pre-footer">
-              Despliegue en Vercel{" "}
-              <AiTwotoneWarning style={{ marginLeft: 5, fontSize: 18 }} />{" "}
+              Despliegue en Vercel
+              <AiTwotoneWarning style={{ marginLeft: 5, fontSize: 18 }} />
             </button>
           </a>
         </div>
