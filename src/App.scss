@@ -1,27 +1,25 @@
-
-body{
+body {
   background-color: #000032;
 }
 .btn-flotante {
-	font-size: 60px; 
-	color: #ffffff; 
-	padding: 18px 30px; 
-	position: fixed;
-	bottom: 40px;
-	right: 40px;
-	transition: all 300ms ease 0ms;
+  font-size: 3.75rem;
+  color: #ffffff;
+  padding: 1.125rem 1.875rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  transition: all 300ms ease 0ms;
 }
 .btn-flotante:hover {
-	transform: translateY(-7px);
+  transform: translateY(-0.438rem);
   cursor: pointer;
-  color: #E31C79;
+  color: #e31c79;
 }
 @media only screen and (max-width: 600px) {
- 	.btn-flotante {
-		font-size: 14px;
-		padding: 12px 20px;
-		bottom: 20px;
-		right: 20px;
-	}
-} 
-
+  .btn-flotante {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.25rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+}

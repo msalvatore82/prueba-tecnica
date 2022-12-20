@@ -8,39 +8,38 @@ nav {
   margin: 0;
   width: 100%;
   justify-content: space-between;
-  padding: 10px;
   background-color: $secundary;
   color: white;
   font-weight: 900;
-  height: 50px;
-  font-size: 14px;
+  height: 3.125rem;
+  font-size: 0.875rem;
   box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
   -webkit-box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
   -moz-box-shadow: -1px -2px 25px 0px rgba(255, 255, 255, 0.46);
 }
 
 .icons {
-  margin-right: 100px;
+  margin-right: 6.25rem;
 }
 .logo {
-  margin-left: 100px;
+  margin-left: 6.25rem;
 }
 
 .git-ico {
   margin: auto;
-  font-size: 20px;
-  margin: 15px;
+  font-size: 1.25rem;
+  margin: 0.938rem;
 }
 
 .in-ico {
   margin: auto;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 nav div {
   display: flex;
   justify-content: space-around;
-  margin-left: 15px;
+  margin-left: 0.938;
   align-items: center;
   
 }
@@ -48,23 +47,23 @@ nav div {
 .text-nav {
   color: white;
   cursor: pointer;
-  gap: 5px; 
+  gap: 0.313rem; 
 }
 
-span{
-  margin: 15px;
+.span{
+  margin: 0.938rem;
 }
 .ico-nav-logout {
   color: white;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
 .text-nav-login {
   color: white;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -112,5 +111,23 @@ span{
 .logo {
   cursor: pointer;
 }
+
+
+@media only screen and (max-width: 710) {
+  .home{
+    display:flex;
+    margin:auto;
+    margin-top:1rem;
+    width: 100%;
+    gap:1.5rem;
+  }
+  }
+
+  @media only screen and (max-width: 710) {
+    .nav{ 
+      width: 100%;
+    
+    }
+    }
 
 
