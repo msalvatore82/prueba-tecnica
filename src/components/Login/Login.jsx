@@ -49,11 +49,11 @@ const Login = () => {
           value={email}
           onChange={onChange}
           className="input-name"
-          placeholder="Name"
+          placeholder="Correo electronico"
         />
         <input
           className="input-password"
-          placeholder="Password"
+          placeholder="Contraseña"
           type="password"
           name="password"
           value={password}

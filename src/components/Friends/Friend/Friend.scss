@@ -6,14 +6,14 @@
   align-items: flex-start;
   justify-content: center;
   width: 98%;
-  margin: 15px;
+  margin: 0.938rem;
 
   .card-friend {
     width: 15%;
-    height: 170px;
-    margin: 15px;
+    height: 10.625rem;
+    margin: 0.938rem;
     border-radius: 15%;
-    padding: 15px;
+    padding: .938rem;
     color: white;
     -webkit-border-radius: 5px 5px 5px 40px;
     -moz-border-radius: 5px 5px 5px 40px;
@@ -31,7 +31,7 @@
     flex-direction: column;
     text-align: left;
     width: 70%;
-    margin: 10px;
+    margin: 0.625rem;
   }
   .text-surname-friend {
     flex-direction: column;
@@ -49,37 +49,37 @@
 .email-surname{
   display: flex;
   flex-direction: column;
-  margin: 2px;
+  margin: 0.125rem;
 }
   .avatar-friends {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
  
   }
 
   .picture {
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
   }
 
   .text-surname-friend {
-    font-size: 15px;
+    font-size: 0.938rem;
     color: $fontsecundary;
     color: #525252;
   }
   .text-name-friend {
     color: #525252;
     font-family: "Work Sans", Sans-serif;
-    font-size: 19px;
+    font-size: 1.188rem;
     font-weight: 600;
   }
 
   .text-email-friend {
     color: #5a5a5a73;
     font-family: "Work Sans", Sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.4em;
   }
@@ -108,3 +108,4 @@
   border-radius: 50%;
   
 }
+

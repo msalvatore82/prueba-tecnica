@@ -1,7 +1,7 @@
 import "./Home.scss";
-import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
-import cleverpyTeam from "../../Assets/super/Cleverpy-rotated-e1655822809236-973x1024.jpeg";
-import { AiOutlineArrowRight, AiOutlineGithub, AiTwotoneWarning } from "react-icons/ai";
+import { FaRegThumbsUp, FaRegThumbsDown, FaAws } from "react-icons/fa";
+// import cleverpyTeam from "../../Assets/super/Cleverpy-rotated-e1655822809236-973x1024.jpeg";
+import { AiOutlineArrowRight, AiOutlineGithub } from "react-icons/ai";
 
 //Descomentar y probar boton de rechazar
 // const boton_no = document.getElementsByClassName('button-discard')[0];
@@ -55,7 +55,7 @@ function Home() {
           </a>
         </div>
         <div className="img-subhome">
-          <img className="img" src={cleverpyTeam} alt="" />
+          <img className="img" src="https://cleverpy.com/wp-content/uploads/2022/06/Cleverpy-rotated-e1655822809236.jpeg" alt="" />
         </div>
       </div>
       <div className="pre-footer">
@@ -63,7 +63,7 @@ function Home() {
           <p className="pre-footer-subtitle">ANTE TODO MUCHAS GRACIAS!!</p>
           <span className="pre-footer-title">
             PUEDEN VER EL REPO DE GITHUB COMO ASI TAMBIEN EL DESPLIEGUE EN
-            VERCEL
+            AWS SERVICE
           </span>
         </div>
         <div className="pre-footer-button">
@@ -73,10 +73,10 @@ function Home() {
               <AiOutlineGithub style={{ marginLeft: 5, fontSize: 18 }} />
             </button>
           </a>
-          <a href="mailto:salvatoretadey.matias@gmail.com">
+          <a href="https://main.d3bowlpwv2y67a.amplifyapp.com/">
             <button className="button-pre-footer">
-              Despliegue en Vercel
-              <AiTwotoneWarning style={{ marginLeft: 5, fontSize: 18 }} />
+              Despliegue AWS 
+              <FaAws style={{ marginLeft: 5, fontSize: 18 }} />
             </button>
           </a>
         </div>

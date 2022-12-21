@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <nav>
+    <nav className="nav">
       <div className="logo" title="ClaverPy">
         <a
           href="https://cleverpy.com/"
@@ -28,20 +28,20 @@ const Header = () => {
         </a>
       </div>
       <div>
-        <span className="text-nav-home" title="Home">
-          <Link to="/">HOME</Link>
+        <span className="text-nav-home span" title="Home">
+          <Link to="/">INICIO</Link>
         </span>
         {user ? (
           <>
-            <span className="text-nav-posts" title="Post">
+            <span className="text-nav-posts span" title="Post">
               <Link to="/posts">POST</Link>
             </span>
-            <span className="text-nav-friend" title="Amigos">
+            <span className="text-nav-friend span" title="Amigos">
               <Link to="/friends">AMIGOS</Link>
             </span>
             <span
               onClick={onLogout}
-              className="ico-nav-logout"
+              className="ico-nav-logout span"
               title="Cerra sesíon"
             >
               <AiOutlineLogout />
@@ -49,7 +49,7 @@ const Header = () => {
           </>
         ) : (
           <>
-            <span className="text-nav-login" title="INICIAR SESION">
+            <span className="text-nav-login span" title="INICIAR SESION">
               <Link to="/login">
                 <AiOutlineLogin />
               </Link>
