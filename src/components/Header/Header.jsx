@@ -37,7 +37,7 @@ const Header = () => {
               <Link to="/posts">POST</Link>
             </span>
             <span className="text-nav-friend span" title="Amigos">
-              <Link to="/friends">AMIGOS</Link>
+              <Link to="/friends">USUARIOS</Link>
             </span>
             <span
               onClick={onLogout}

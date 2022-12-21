@@ -1,12 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { Button, Modal, Form, Input } from "antd";
+import { Modal, Form, Input } from "antd";
 import { updatePost } from "../../../features/posts/postsSlice";
+import "./EditPost.scss";
+import { useNavigate } from "react-router";
 
 const EditPost = ({ visible, setVisible }) => {
-  const { posts, post } = useSelector((state) => state.posts);
+  const { post } = useSelector((state) => state.posts);
   const [form] = Form.useForm();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const postToEdit = {
@@ -19,25 +22,42 @@ const EditPost = ({ visible, setVisible }) => {
     const postWithId = { ...values, id: post.id };
     dispatch(updatePost(postWithId));
     setVisible(false);
+    navigate("/posts");
+  };
+
+  const handleCancel = () => {
+    setVisible(false);
   };
 
   return (
     <Modal title="Editar Post" visible={visible} footer={[]}>
-      <Form onFinish={onFinish} form={form}>
-        <Form.Item label="Editar titulo" name="title">
-          <Input placeholder="Titulo" />
-        </Form.Item>
-        <Form.Item label="Editar post">
-          <Form.Item name="body" noStyle>
-            <Input placeholder="body" />
-          </Form.Item>
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
+      <form onFinish={onFinish} form={form} className="edit-container">
+        <input
+          placeholder="Titulo"
+          label="Titulo"
+          name="title"
+          className="input-title"
+        />
+        <input
+          placeholder="Contenido"
+          name="body"
+          type="text"
+          label="Contenido"
+          className="input-body"
+        />
+        <div className="buttons-modal">
+          <button type="primary" className="button-modal" htmlType="submit">
+            Actualizar
+          </button>
+          <button
+            type="primary"
+            className="button-modal"
+            onClick={handleCancel}
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
     </Modal>
   );
 };

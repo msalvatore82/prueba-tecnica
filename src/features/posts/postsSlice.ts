@@ -24,9 +24,9 @@ const initialState: InitialState = {
   },
 };
 
-export const getAllPosts = createAsyncThunk("posts/getAllPosts", async () => {
+export const getAllPosts = createAsyncThunk("posts/getAllPosts", async (userId: number) => {
   try {
-    return await postsService.getAllPosts();
+    return await postsService.getAllPosts(userId);
   } catch (error) {
     console.error(error);
   }
@@ -42,7 +42,7 @@ export const destroyPostById = createAsyncThunk(
     }
   }
 );
-export const getPostById = createAsyncThunk("posts/getPostById", async (id) => {
+export const getPostById = createAsyncThunk("posts/getPostById", async (id: number) => {
   try {
     return await postsService.getPostById(id);
   } catch (error) {
