@@ -42,6 +42,20 @@ export const destroyPostById = createAsyncThunk(
     }
   }
 );
+export const getPostById = createAsyncThunk("posts/getPostById", async (id) => {
+  try {
+    return await postsService.getPostById(id);
+  } catch (error) {
+    console.error(error);
+  }
+});
+export const updatePost = createAsyncThunk("posts/updatePost", async (post) => {
+  try {
+    return await postsService.updatePost(post);
+  } catch (error) {
+    console.error(error);
+  }
+});
 
 export const postsSlice = createSlice({
   name: "posts",
@@ -56,11 +70,25 @@ export const postsSlice = createSlice({
       .addCase(getAllPosts.fulfilled, (state, action) => {
         state.posts = action.payload;
       })
-      
+
       .addCase(destroyPostById.fulfilled, (state, action) => {
         state.posts = state.posts.filter(
           (post: Post) => post.id !== action.payload
         );
+      })
+      .addCase(getPostById.fulfilled, (state, action) => {
+        state.post = action.payload;
+      })
+      .addCase(updatePost.fulfilled, (state, action) => {
+        const posts = state.posts.map((post) => {
+          if (post.id === action.payload.post.id) {
+            post = action.payload.post;
+          }
+
+          return post;
+        });
+
+        state.posts = posts;
       });
   },
 });

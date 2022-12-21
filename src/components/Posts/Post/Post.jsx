@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "./Post.scss";
 import { FaRegTrashAlt } from "react-icons/fa";
 import {
-  destroyPostById,
+  destroyPostById, getPostById,
 } from "../../../features/posts/postsSlice";
 import { EditOutlined } from "@ant-design/icons";
 import { useState } from "react";
@@ -14,7 +14,7 @@ const Post = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = (id) => {
-  console.log(id)
+    dispatch(getPostById(id));
   setIsModalVisible(true);
   
   };
@@ -42,6 +42,7 @@ const Post = () => {
                
           </div>
       ))}
+      <EditPost visible={isModalVisible} setVisible={setIsModalVisible}/>
     </div>
   );
 };
