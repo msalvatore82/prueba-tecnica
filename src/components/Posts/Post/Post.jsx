@@ -61,11 +61,11 @@ const Post = () => {
   
   return (
     <>
-    <form onSubmit={onSubmit}>
-      <select placeholder="Please select genre" onChange={(e)=> setId(e.target.value)}>
+    <form onSubmit={onSubmit} className="form-select-user" >
+      <select placeholder="Please select genre" onChange={(e)=> setId(e.target.value)} className="select-user" >
         {selectOption}
       </select>
-      <button>selecionar usurio</button>
+      <button className="button-select"  >Seleccionar Usuario</button>
     </form>
       <div className="card-container">
         {posts.map((post) => (
@@ -74,6 +74,7 @@ const Post = () => {
             <p className="text-title">Title: {post.title} </p>
             <p className="text-body">Body: {post.body} </p>
             <div className="buttons-posts">
+              
               <button
                 className="button-delete"
                 onClick={() => showModal(post.id)}
