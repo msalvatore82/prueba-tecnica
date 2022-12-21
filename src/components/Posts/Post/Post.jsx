@@ -4,11 +4,20 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import {
   destroyPostById,
 } from "../../../features/posts/postsSlice";
+import { EditOutlined } from "@ant-design/icons";
+import { useState } from "react";
+import EditPost from "../EditPost/EditPost";
 
 const Post = () => {
   const dispatch = useDispatch();
   const { posts } = useSelector((state) => state.posts);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
+  const showModal = (id) => {
+  console.log(id)
+  setIsModalVisible(true);
+  
+  };
   const deletePost = async (id) => {
     dispatch(destroyPostById(id));
   };
@@ -22,7 +31,8 @@ const Post = () => {
             <p className="text-user">UserId: {post.userId}</p>
             </>                
                 <p className="text-title">Title: {post.title}   </p>
-                <p className="text-body">Body: {post.body} </p>              
+                <p className="text-body">Body: {post.body} </p> 
+                <EditOutlined onClick={() => showModal(post.id)} />            
                 <button
                   className="button-delete"
                   onClick={() => deletePost(post.id)}
