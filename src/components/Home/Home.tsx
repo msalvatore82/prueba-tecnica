@@ -1,15 +1,6 @@
 import "./Home.scss";
 import { FaRegThumbsUp, FaRegThumbsDown, FaAws } from "react-icons/fa";
-// import cleverpyTeam from "../../Assets/super/Cleverpy-rotated-e1655822809236-973x1024.jpeg";
 import { AiOutlineArrowRight, AiOutlineGithub } from "react-icons/ai";
-
-//Descomentar y probar boton de rechazar
-// const boton_no = document.getElementsByClassName('button-discard')[0];
-// boton_no.onmouseover = () => {
-//       boton_no.style.position = "absolute";
-//       boton_no.style.left = Math.random()*700 + 'px';
-//       boton_no.style.top = Math.random()*700 + 'px';
-// }
 
 function Home() {
   return (
@@ -83,6 +74,5 @@ function Home() {
       </div>
     </>
   );
-}
-
+};
 export default Home;

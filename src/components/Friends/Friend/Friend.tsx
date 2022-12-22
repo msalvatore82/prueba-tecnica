@@ -3,14 +3,14 @@ import avatar from "../../../Assets/super/avatar1.png";
 import "./Friend.scss";
 
 const Friend = () => {
-  const { friends, isLoading } = useSelector((state) => state.auth);
+  const { friends, isLoading } = useSelector((state: any) => state.auth);
 
   if (isLoading) {
     return <h1>Cargando...</h1>;
   }
   return (
     <div className="card-container-friends">
-      {friends.map((friend) => (
+      {friends.map((friend: {id: number, name: string, username: string, email: string}) => (
         <div key={friend.id} className="card-friend">
           <div className="name-avatar">
             <p className="text-name-friend">{friend.name} </p>

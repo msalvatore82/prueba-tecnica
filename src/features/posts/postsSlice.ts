@@ -1,18 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import postsService from "./postsService";
+import { Post, InitialState } from "../../types/Types";
 
-interface Post {
-  id: number;
-  userId: number;
-  title: string;
-  body: string;
-}
 
-interface InitialState {
-  posts: Post[];
-  isLoading: boolean;
-  post: Post;
-}
 const initialState: InitialState = {
   posts: [],
   isLoading: false,
@@ -49,13 +39,6 @@ export const getPostById = createAsyncThunk("posts/getPostById", async (id: numb
     console.error(error);
   }
 });
-export const updatePost = createAsyncThunk("posts/updatePost", async (post) => {
-  try {
-    return await postsService.updatePost(post);
-  } catch (error) {
-    console.error(error);
-  }
-});
 
 export const postsSlice = createSlice({
   name: "posts",
@@ -79,17 +62,6 @@ export const postsSlice = createSlice({
       .addCase(getPostById.fulfilled, (state, action) => {
         state.post = action.payload;
       })
-      .addCase(updatePost.fulfilled, (state, action) => {
-        const posts = state.posts.map((post) => {
-          if (post.id === action.payload.post.id) {
-            post = action.payload.post;
-          }
-
-          return post;
-        });
-
-        state.posts = posts;
-      });
   },
 });
 

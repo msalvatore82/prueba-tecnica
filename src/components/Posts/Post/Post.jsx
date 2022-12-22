@@ -8,9 +8,7 @@ import {
   getAllPosts,
   getPostById,
 } from "../../../features/posts/postsSlice";
-import { EditOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import EditPost from "../EditPost/EditPost";
 import { getAllFriends } from "../../../features/auth/authSlice";
 import { Navigate } from "react-router";
 
@@ -75,12 +73,7 @@ const Post = () => {
             <p className="text-body">Body: {post.body} </p>
             <div className="buttons-posts">
               
-              <button
-                className="button-delete"
-                onClick={() => showModal(post.id)}
-              >
-                Editar Post <EditOutlined style={{ marginLeft: 5 }} />
-              </button>
+              
 
               <button
                 className="button-delete"
@@ -91,7 +84,6 @@ const Post = () => {
             </div>
           </div>
         ))}
-        <EditPost visible={isModalVisible} setVisible={setIsModalVisible} />
       </div>
     </>
   );

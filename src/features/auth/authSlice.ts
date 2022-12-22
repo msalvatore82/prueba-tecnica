@@ -1,34 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import authService from "./authService";
+import { InitialStateUser  } from "../../types/Types";
 
 
-interface Friend {
-  lat:string,
-  lng: string;
-  street: string;
-  suite: string;
-  city: string;
-  zipcode: string;
-  geo: string;
-  name: string;
-  catchPhrase: string;
-  bs: string;
-  id: number;
-  username: string;
-  email: string;
-  address: string;
-  phone: string;
-  website: string;
-  company: string;
-}
-interface InitialState {
-  user:string
-  friends: [],
-  friend: Friend,
-  
-}
-
-const initialState : InitialState = {
+const initialState: InitialStateUser = {
   user: "" ,
   friends: [],
   friend: { 
@@ -64,7 +39,7 @@ export const getAllFriends = createAsyncThunk(
   }
 );
 
-export const login = createAsyncThunk("auth/login", async (user) => {
+export const login = createAsyncThunk("auth/login", async (user: object) => {
   try {
     return await authService.login(user);
   } catch (error) {
@@ -82,7 +57,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 
 export const authSlice = createSlice({
   name: "auth",
-  initialState: {user: "", friends: [], friend: {}}, // initialState: antes estaba asi y funcionaba todo menos el navigate
+  initialState: {user: "", friends: [], friend: {}}, 
   reducers: {},
   extraReducers: (builder) => {
     builder

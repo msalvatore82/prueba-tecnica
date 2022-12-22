@@ -5,12 +5,13 @@ import { AiOutlineLogout, AiOutlineLogin } from "react-icons/ai";
 import logo from "../../Assets/Cleverpy.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../features/auth/authSlice";
+import { AppDispatch } from "../../app/store";
 
 const Header = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
-  const onLogout = (e) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const { user } = useSelector((state: any) => state.auth);
+  const onLogout = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     dispatch(logout());
     navigate("/login");
