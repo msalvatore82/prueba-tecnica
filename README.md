@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+# React Redux Typescript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## Índice
 
-## Available Scripts
+- About the test:
+  - Installation and deployment
+  - Technologies used
+  - Origin
+  - Objectives
+  - Challenges presented
+  - Authors
 
-In the project directory, you can run:
+## About the test
 
-### `npm start`
+The final functionality of the solution must allow the user to manage and view all messages
+of the users available in the tool.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 💫 Installation and deployment
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To download the repository, in Visual Studio, open a terminal and run the following command:
 
-### `npm test`
+Ecommerce frontend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ git clone https://github.com/msalvatore82/prueba-tecnica.git
+```
 
-### `npm run build`
+Next, you will need to download the external modules. To do this, perform the following command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ npm i
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then, start the React frontend as well as the Sequelize backend via:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ npm start
+```
 
-### `npm run eject`
+Now you will be able to navigate through the interface
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 💻 Technologies used
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- HTML
+- CSS
+- Sass
+- Typescript
+- React
+- Redux
+- React-GlobalContext
+- React-Router
+- Sequelize
+- NodeJS
+- Axios
+- Ant-Design
+- Guards
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Origin
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The test consists of designing, implementing and connecting a platform with "cards" for the
+display of posts or comments made by a user. For this, we will use as an example
+the free content offered by jsonplaceholder.typicode.com, and more specifically, the results
+offered by the GET call from https://jsonplaceholder.typicode.com/posts..
 
-## Learn More
+### ⚔️ Objectives
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a REST API that is capable of the following:
+Code entirely in TypeScript.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Typed without types any.
+- Code in React
+- Use of functional components
+- Good indentation
+- Do not use external libraries that perform the function described in the document. Whether
+  allow those that are a means to achieve the final functionality. (A bookstore
+  that provides a dropdown for the card would be allowed, a library that creates the
+  full card no).
+
+#### ⚔️ Minimum components:
+
+- Login
+- Home
+- User
+- Header
+- Post
+- Post, can be filtered by use
+- Post can be deleted and edited
+- Footer
+
+## 🔜 Future implementations
+
+- Some views Responsive design.
+- Bugging corrections
+- Add edit to the products.
+- Post, can be filtered by use
+
+## Authors
+
+### [Matias](https://github.com/msalvatore82)
