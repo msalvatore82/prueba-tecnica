@@ -1,4 +1,3 @@
-import { getAllFriends } from '../features/auth/authSlice';
 export interface Post  {
     id: number;
     userId: number;
