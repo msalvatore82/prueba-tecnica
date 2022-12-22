@@ -42,14 +42,11 @@ Now you will be able to navigate through the interface
 ### 💻 Technologies used
 
 - HTML
-- CSS
 - Sass
 - Typescript
 - React
 - Redux
-- React-GlobalContext
 - React-Router
-- Sequelize
 - NodeJS
 - Axios
 - Ant-Design
