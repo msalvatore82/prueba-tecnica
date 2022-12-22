@@ -83,8 +83,6 @@ Code entirely in TypeScript.
 - User
 - Header
 - Post
-- Post, can be filtered by use
-- Post can be deleted and edited
 - Footer
 
 ## 🔜 Future implementations
@@ -93,6 +91,7 @@ Code entirely in TypeScript.
 - Bugging corrections
 - Add edit to the products.
 - Post, can be filtered by use
+- Post can be deleted and edited
 
 ## Authors
 
