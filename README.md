@@ -31,7 +31,7 @@ Next, you will need to download the external modules. To do this, perform the fo
 $ npm i
 ```
 
-Then, start the React frontend as well as the Sequelize backend via:
+Then, start the React frontend.
 
 ```
 $ npm start
