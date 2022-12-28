@@ -82,11 +82,10 @@ Code entirely in TypeScript.
 - Post
 - Footer
 
-## 🔜 Future implementations
+## implementations
 
 - Some views Responsive design.
 - Bugging corrections
-- Add edit to the products.
 - Post, can be filtered by use
 - Post can be deleted and edited
 
